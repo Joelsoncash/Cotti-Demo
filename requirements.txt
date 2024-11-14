@@ -1,2 +1,3 @@
 tkinter
 openai
+tkhtmlview  # Added for embedded web view
