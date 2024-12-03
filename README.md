@@ -1,54 +1,78 @@
-# COttie Connect Educational App
+# COttie Connect
 
-## Overview
-COttie Connect is an interactive educational application designed to help students learn and teachers manage lessons more effectively.
+COttie Connect is an educational application designed to help elementary school students learn through interactive lessons with teacher-approved video recommendations.
 
-## Prerequisites
-- Python 3.7+
-- tkinter (usually comes pre-installed with Python)
-- pip
+## Features
+
+- **Student View**
+  - Interactive lesson display
+  - Subject selection (Math, Science, History, English)
+  - Understanding feedback system
+  - Access to teacher-approved educational videos
+
+- **Teacher View**
+  - Real-time student progress monitoring
+  - Video approval system
+  - Lesson-specific video recommendations
+  - Auto-refreshing dashboard
 
 ## Installation
-1. Clone the repository
+
+1. Clone the repository:
 ```bash
 git clone https://github.com/Joelsoncash/Cotti-Demo.git
-cd Cotti-Demo
 ```
 
-2. Install dependencies
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the application
+## Running the Application
+
+You can run the application in two ways:
+
+### 1. Direct Python Execution
 ```bash
 python Demo.py
 ```
 
-## Dependencies
-- openai
-- tkhtmlview (optional, for embedded web view)
+### 2. Docker Container
+```bash
+docker build -t cottie-connect .
+docker run -e DISPLAY=host.docker.internal:0 cottie-connect
+```
 
-## Troubleshooting
-- If tkinter is not installed:
-  - On macOS: `brew install python-tk`
-  - On Ubuntu/Debian: `sudo apt-get install python3-tk`
-  - On Windows: Reinstall Python and ensure "tcl/tk and IDLE" is selected during installation
+## Usage
+
+1. **Student Login**
+   - Enter your name
+   - Select a subject
+   - Read the lesson content
+   - Provide understanding feedback
+   - Access approved educational videos
+
+2. **Teacher View**
+   - Monitor student progress in real-time
+   - Review and approve video recommendations
+   - Track student understanding across subjects
+
+## Project Structure
+
+- `Demo.py` - Main application file
+- `lessons/` - Directory containing lesson content
+  - `math.txt` - Mathematics lessons
+  - `science.txt` - Science lessons
+  - `history.txt` - History lessons
+  - `english.txt` - English lessons
+- `Dockerfile` - Docker configuration
+- `requirements.txt` - Python dependencies
 
 ## Features
-- Student Understanding Feedback System
-- Automatic Educational Video Recommendations
-- Lesson Management for Teachers
-- Subject-based Learning Support
 
-## Technologies Used
-- Python
-- Tkinter
-- OpenAI API
-- YouTube Integration
-
-## Contributing
-Contributions are welcome. Please submit pull requests or open issues.
-
-## License
-[Specify your license here]
+- Real-time student progress tracking
+- Automatic video recommendations based on lesson content
+- Teacher approval system for educational videos
+- Interactive GUI with elementary-friendly design
+- Auto-refreshing dashboards
+- Subject-specific lesson content
